@@ -1,0 +1,1006 @@
+/*****
+Vars
+  TEL nav bg color    : 414241
+  TEL banner color    : 1784B8
+  TEL block header    : 1778A5
+  TEL carousel arrows : 949594
+  TEL menu active     : 011e41
+  TEL menu background : 414241;
+*****/
+
+/* --------------------------
+
+  Wrapper for content that appears in the /admin content field
+
+--------------------------- */
+.mainContent {
+  font-size: 16px;
+  position: relative;
+}
+
+
+/* --------------------------
+
+  Blue TEL banner above header images
+
+--------------------------- */
+.bannerWrapper {
+  position: relative;
+  background-color: #1784B8;
+  color: #fff;
+  top: 0;
+  padding-left: 15px;
+}
+
+.telBanner {
+  font-size: 1.5em;
+  padding: .5em 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+/* --------------------------
+
+  Carousel on TEL landing page
+
+--------------------------- */
+#myCarousel {
+  margin-bottom: 0;
+}
+
+.carousel-inner {
+  height: 60vh;
+}
+.carousel__item {
+  position: relative;
+  height: 100%;
+}
+
+.carousel__item:first-child {
+  background: url(../img/itel-final-report.png);
+  background-position: 0% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel__item:nth-child(2) {
+  background: url(../img/FacultyStories_Carousel.jpg);
+  background-position: 0% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel__item:nth-child(3) {
+  background: url(../img/TEL-Canvas-Banner.jpg);
+  background-position: 0% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel-control {
+  background-color: transparent;
+  color: #949594;
+  opacity: 1;
+  border: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  font-size: 4em;
+  top: 0;
+  top: 87%;
+}
+
+.carousel__cap {
+  position: absolute;
+  background: rgba(255, 255, 255, .83);
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__cap__header {
+  font-family: "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1778A5;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.carousel__cap__text {
+  font-family: "DINOffcLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 100;
+  padding: .5em .5em;
+  line-height: 1.5;
+}
+
+
+/* --------------------------
+
+  Vertical TEL menu (across all TEL pages)
+
+--------------------------- */
+.testButton {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  font-size: 5em;
+  z-index: 500;
+}
+.telMenu {
+  position: fixed;
+  height: 80vh;
+  /*min-height: 440px;
+  max-height: 750px;*/
+  width: 10vw;
+  /*min-width: 60px;*/
+  top: 10vh;
+  right: 5vw;
+  z-index: 500;
+  box-shadow: 0 19px 20px rgba(0,0,0,.3),
+              0 15px 12px rgba(0,0,0,.22);
+  transition: box-shadow .1s ease-in-out;
+}
+
+.telMenu__list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;/*removing bootstrap margins*/
+  background-color: rgba(255,255,255,0);
+}
+
+.noBoxShadow {
+  box-shadow: none;
+}
+
+.telMenu__item {
+  background-color: rgba(65, 66, 65, .95);/*With transparency use white icons*/
+  /*background-color: #414241;*/
+  height: calc(80vh / 7);/*nav.telMenu is height: 80vh with 7 menu items*/
+  /*min-height: calc(440px / 7);
+  max-height: calc(750px / 7);*/
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.telMenu__item:not(.scrollDownItem):hover {
+  color: #011e41;
+  background-color: rgba(255,255,255,.8);
+}
+
+.telMenu--home {
+  background-image: url(../img/telMenu_home_icon.png);
+  background-size: 50%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  z-index: 5;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 3px 3px 1px 3px;
+  border-radius: 10px 10px 0 0;
+}
+
+.telMenu--home:hover {
+  background-image: url(../img/telMenu_home_icon_active.png);
+  border-color: #011e41;
+  /*background-color: rgba(255,255,255,.8);*/
+}
+
+.telMenu--tel_opportunities {
+  background-image: url(../img/telMenu_tel_opportunities.png);
+  background-size: 45%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  top: calc(100% / 7 + 1px);
+}
+
+.telMenu--tel_opportunities:hover {
+  background-image: url(../img/telMenu_tel_opportunities_active.png);
+}
+
+.telMenu--tel_topics {
+  background-image: url(../img/telMenu_tel_topics.png);
+  background-size: 45%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  top: calc(2 * (100% / 7 + 1px));
+}
+
+.telMenu--tel_topics:hover {
+  background-image: url(../img/telMenu_tel_topics_active.png);
+}
+
+.telMenu--faculty_stories {
+  background-image: url(../img/telMenu_faculty_stories.png);
+  background-size: 45%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  top: calc(3 * (100% / 7 + 1px));
+}
+
+.telMenu--faculty_stories:hover {
+  background-image: url(../img/telMenu_faculty_stories_active.png);
+}
+
+.telMenu--tools_services {
+  background-image: url(../img/telMenu_tools_services.png);
+  background-size: 45%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  top: calc(4 * (100% / 7 + 1px));
+}
+
+.telMenu--tools_services:hover {
+  background-image: url(../img/telMenu_tools_services_active.png);
+}
+
+.telMenu--related_projects {
+  background-image: url(../img/telMenu_related_projects.png);
+  background-size: 45%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  top: calc(5 * (100% / 7 + 1px));
+}
+
+.telMenu--related_projects:hover {
+  background-image: url(../img/telMenu_related_projects_active.png);
+}
+
+.scrollDownItem {
+  top: calc(6 * (100% / 7 + 1px));
+}
+
+/*Comma-separated won't work w/ :not, so listing classes instead.*/
+.telMenu--tel_opportunities,
+.telMenu--tel_topics,
+.telMenu--faculty_stories,
+.telMenu--tools_services,
+.telMenu--related_projects {
+  border-style: solid;
+  border-width: 0px 3px 1px 3px;
+}
+
+.telMenu__item__name {
+  position: relative;
+  top: 70%;
+  padding: 0;
+  margin: 0;
+}
+
+/*Styles for scroll down menu item*/
+.scrollDownItem {
+  text-align: center;
+  border-style: solid;
+  border-width: 0px 3px 3px 3px;
+  border-radius: 0 0 10px 10px;
+}
+
+.scrollDownItem span {
+  display: block;
+  font-size: .6em;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 65px;
+  /*whitespace: nowrap;*/
+  width: 100%;
+  margin: 0 auto;
+}
+
+.scrollDown {
+  position: absolute;
+  top: .8em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  width: 26px;
+  height: 45px;
+  border: 1px solid #fff;
+  border-radius: 13px;
+}
+
+.scrollDown:before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 11px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 100%;
+  animation-name: dot1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.scrollDown:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 100%;
+  animation-name: dot2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 9px);
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 9px);
+  }
+}
+
+/* This is the hidden expand elem. Becomes visible when menu items collapse. */
+.expandMenu {
+  text-align: center;
+  min-height: 50px;
+  width: 100%;
+  background-color: #cdc;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  text-transform: uppercase;
+  font-size: .8em;
+  border-radius: 13px;
+  background-color: rgba(65, 66, 65, .95);
+  /*background-color: #414241;/*No transparency*/
+  color: #fff;
+  border: 2px solid white;
+  box-shadow: 0 19px 20px rgba(0,0,0,.3),
+              0 15px 12px rgba(0,0,0,.22);
+  transition: all .3s ease-in-out;
+}
+
+.expandMenu p {
+  position: relative;
+  top: 50%;
+  padding: .5em;
+  margin: 0 auto;
+}
+
+/*Classes for hiding/showing/moving elems in the menu.*/
+.shiftUp {
+  top: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*If this class is on .expandMenu, then it becomes visibile while the other elems are shifted up.*/
+.isHidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.isVisible {
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+}
+
+/*
+This is where the main cndls nav goes hamburger
+*/
+@media screen and (max-width: 967px) {
+  .telMenu {
+    top: 18vh;
+  }
+}
+
+
+
+@media screen and (max-width: 990px) {
+  .telMenu {
+    width: 13vw;
+    /*height: 80vh;*/
+  }
+
+  .telMenu__item {
+    /*height: calc(80vh / 7);*/
+  }
+
+  .telMenu__item__name {
+    font-size: .7em;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1139px) {
+  .telMenu__item__name {
+    font-size: .7em;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .telMenu {
+    width: 7vw;
+  }
+  .telMenu__item {
+    line-height: 1em;
+  }
+
+  .telMenu__item__name {
+    top: 70%;
+    font-size: .7em;
+    padding: .25em;
+    margin-bottom: .25em;
+  }
+
+  .telMenu--home {
+    background-position: 50% 20%;
+  }
+
+  .scrollDown {
+    position: absolute;
+    top: .8em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: 13px;
+  }
+
+  .scrollDown:before,
+  .scrollDown:after {
+    left: 11px;
+  }
+
+  .scrollDownItem span {
+    top: 70%;
+    font-size: .6em;
+  }
+
+  .expandMenu {
+    font-size: .7em;
+  }
+}
+
+/*End styles for scroll down menu item*/
+
+
+
+
+/* --------------------------
+
+  Lead text on TEL pages
+
+--------------------------- */
+.telLead {
+  padding-top: 2.5em;
+}
+
+.telLead__text {
+  font-family: "DINOffclight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #656769;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+@media screen and (max-width:767px) {
+  .telLead {
+    padding-top: 2.5em;
+  }
+
+  .telLead h2 {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* --------------------------
+
+  TEL BLOCKS
+    These are the media objects (image, text, sometimes header) that appear
+    frequently throughout the TEL pages
+
+--------------------------- */
+.telBlockWrapper {
+  /* Only styled for mobile */
+}
+
+@media screen and (max-width: 767px) {
+  .telBlockWrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.telPastFeaturedStories {
+  margin-bottom: 4em;
+}
+
+.telBlock {
+  padding-top: 3em;
+}
+
+@media screen and (max-width: 767px) {
+  .telBlock {
+    padding-top: 4em;
+  }
+}
+
+.telBlock:last-child {
+  padding-bottom: 7em;
+}
+
+.telBlock__header {
+  font-family:  "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.25em;
+  color: #1778A5;
+}
+
+.telBlock__header.teltopicheader {
+  min-height: 120px;
+}
+
+.telBlock__description {
+  font-size: 1.3em;
+  line-height: 1.25;
+  padding-bottom: .6em;
+  min-height: 6em;
+}
+
+.telBlock__imgCap {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  background: rgba(255, 255, 255, .8);
+  padding: 1.2em;
+  font-size: .75em;
+  line-height: 1.4em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .telBlock {
+    /*font-size: 2.5em;*/
+  }
+  .telBlock__header {
+    font-size: 2.75em;
+  }
+  .telBlock__description {
+    font-size: 1.75em;
+  }
+}
+
+
+/* --------------------------
+
+  TEL subpages header images
+  Images differ, needed to scale differently at different screen sizes.
+
+--------------------------- */
+.telSubpage__headerImgWrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.telSubpage__headerImgWrapper img {
+  position: relative;
+  bottom: 60%;
+  height: auto;
+  width: 100%;
+}
+
+.telSubpage__headerImgWrapper .telSubpage__headerImg--topics {
+  bottom: 30%;
+}
+
+.telSubpage__headerImgWrapper .telSubpage__headerImg--engagementlargecourses,
+.telSubpage__headerImgWrapper .telSubpage__headerImg--studentwriting {
+  bottom: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1281px) {
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--facultyStories,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--opportunities,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--toolsservices,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--relatedprojects {
+    bottom: 40%;
+  }
+
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--flipping {
+    bottom: 25%;
+  }
+
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--topics {
+    bottom: 0;
+  }
+
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--engagementlargecourses,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--studentwriting {
+    bottom: 65%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--facultyStories,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--opportunities,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--toolsservices,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--relatedprojects,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--flipping {
+    bottom: 0%;
+  }
+
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--topics {
+    bottom: 10%;
+  }
+
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--engagementlargecourses,
+  .telSubpage__headerImgWrapper .telSubpage__headerImg--studentwriting {
+    bottom: 0%;
+  }
+}
+
+/* --------------------------
+
+  Subpage content blocks
+
+--------------------------- */
+.telSubpage__contentBlockWrapper {
+  /*padding-top: 3em;*/
+  padding-top: 2em;
+}
+.telSubpage__contentBlockWrapper:last-child {
+  padding-bottom: 3em;/*Between last row of content and footer*/
+}
+
+@media screen and (max-width: 767px) {
+  .telSubpage__contentBlockWrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+h2.telSubpage__header {
+  font-family:  "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1784B8;
+  font-weight: 300;
+  font-size: 3em;
+  /*padding-bottom: .5em;*/
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+.telSubpage__subheader {
+  font-family:  "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1.3;
+}
+
+.telSubpage__graph {
+  font-size: 1.3em;
+  padding: .75em 0;
+  line-height: 1.3;
+  margin: 0;
+  position: relative;
+}
+
+.telOpps__footnote {
+  font-style: italic;
+  font-size: .8em;
+}
+
+.telOpps__anchor {
+  color: #000;
+}
+
+.telOpps__btn {
+  height: 11em;
+  max-height: 11em;
+  width: 400px;
+  background-repeat: no-repeat;
+  border-radius: 13px;
+}
+
+.telOpps__btn.colloquium {
+  background-image: url(../img/cndls-faculty-colloquium.png);
+  margin-right: 5em;
+}
+
+.telOpps__btn.telgrants {
+  background-image: url(../img/telgrant_btn.png);
+}
+
+/*.telOpps__btn.colloquium*/
+/*@media screen and (max-width: 979px) {
+  .telOpps__btn.colloquium {
+    margin-bottom: 3em;
+  }
+}*/
+
+.telOpps__blockBtn {
+  height: 7em;
+  background-repeat: no-repeat;
+  border-radius: 13px;
+  background-image: linear-gradient(#16658b, #2185b6);
+  display: flex;
+  flex-direction: column;
+}
+
+.telOpps__blockBtn p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.telOpps__blockBtn--header {
+  flex-shrink: 2;
+}
+
+@media screen and (max-width: 767px) {
+  /*vertical space between buttons on smaller screen*/
+  .telOpps__blockBtn.colloquium-btn {
+    margin-bottom: 3em;
+  }
+
+}
+
+.telOpps__blockBtn--header {
+  color: #fff;
+  font-family:  "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  padding-top: 1em;
+  /*padding-bottom: .4em;*/
+  height: 50%;
+}
+
+.telOpps__blockBtn--detail {
+  color: #fff;
+  padding-bottom: .5em;
+}
+
+
+/* .telOppsanchor_dest:before */ .telOppsanchor_dest:before {
+  display: block;
+  content: " ";
+  /*margin-top: -100px;
+  height: 100px;*/
+  margin-top: -150px;
+  height: 150px;
+  visibility: hidden;
+}
+
+.telGrant__graph {
+  padding-bottom: .2em
+}
+
+.sotl__footnote {
+  padding: 3em 0;
+}
+
+.sotl__footnote p {
+  font-size: 1.1em;
+}
+
+.telSubpage__wrapText {
+  font-size: 1.3em;
+  padding: 0;
+}
+
+.telSubpage__bulletedList {
+  list-style: disc;
+}
+
+.telSubpage__bulletedList li {
+  font-size: 1.3em;
+  line-height: 1.3;
+  margin-left: 1.25em;
+}
+
+.telSubpage__nonBulletedList li {
+  margin-left: 1.25em;
+}
+
+.telSubpage__telOppEmphasis {
+  font-family:  "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.telBlock__imgWrapper {
+  /*max-width: 370px;*/
+  display: inline-block;
+  height: 100%;
+  max-height: 210px;
+  overflow: hidden;
+  /*outline: 1px solid red;*/
+}
+
+@media screen and (max-width: 767px) {
+  .telFacultyStory__blockImgWrapper {
+    width: 100%;
+  }
+}
+
+.telBlock__img {
+  width: 100%;
+  height: auto;
+}
+
+.telSubpage__imgCap {
+  font-size: .9em;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: .5em;
+}
+
+@media screen and (max-width: 767px) {
+  .telSubpage__imgCap {
+    padding-bottom: 2em;/*More space between cap and next img on mobile*/
+  }
+}
+
+/*.submitStoryBtn {*/
+.telSubpage__btn {
+  /*background-color: #1784B8;*/
+  background-image: linear-gradient(#16658b, #2185b6);
+  width: 10em;
+  color: #fff;
+  padding: .4em .5em;
+  border-radius: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  line-height: 1.25em;
+}
+
+.telSubpage__topicsBtn {
+  margin-top: 1.5em;
+  font-size: 1.2em;
+}
+
+.telSubpage__oppsBtn {
+  font-size: .9em;
+}
+
+.submitstoryBtn {
+  margin-top: 1.5em;
+}
+
+
+/* --------------------------
+
+  Inspect RSS feed on Tools/Services page
+
+--------------------------- */
+.inspect__header {
+  font-family: "DINOffcMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  padding: 1.25em .5em 0em 0;
+  line-height: 1.3;
+}
+
+.inspect_post {
+  /*outline: 1px solid red;*/
+  padding: 0px .5em;
+}
+
+.inspect__title {
+  padding-bottom: .7em;
+  margin: 0;
+}
+
+.inspect__date {
+  /*padding-left: 2em;*/
+}
+
+
+/* --------------------------
+
+  Callout treatments (video, pull quotes, etc) on subpages
+
+--------------------------- */
+blockquote {
+  font-family: 'DINOffcCondMedi';
+  padding: 25px 0 25px 0;
+  margin: 50px 0;
+  color: #369;
+  font-size: 160%;
+  line-height: 150%;
+  border: none;
+  border-top: 3px double #eee;
+  border-bottom: 3px double #eee;
+  position: relative;
+}
+
+blockquote small {
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.5
+}
+
+blockquote small:before {
+  content: none;
+}
+
+/*Both
+.telSubpage__wrapMedia
+.telSubpage__mediaAttribution
+are for the video w/ text wrap.*/
+.telSubpage__wrapMedia {
+  margin: 1.5em 2em;
+  float: right;
+}
+
+.telSubpage__wrapMedia img {
+  max-width: 700px;
+  padding-bottom: 2em;
+}
+
+.telSubpage__mediaAttribution {
+  font-size: 1em;
+}
+
+/*This class is for the TC-like vid treatment.*/
+.telSubpage__vidCap {
+  font-size: 1.75em;
+  position: relative;
+  top: 50%;
+}
+
+.telSubpage__quote {
+  font-style: italic;
+  color: #4071A5;
+  font-size: 1.5em;
+}
+
+.telSubpage__attribution {
+  color: #999B99;
+  font-size: 1em;
+  padding-top: 1.75em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1281px) {
+  .telSubpage__quote {
+    font-size: 1.5em;
+  }
+
+  .telSubpage__attribution {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .telSubpage__vidCap {
+    padding-left: 1.5em;
+    padding-bottom: 1.5em;
+  }
+  .telSubpage__vid,
+  .telSubpage__quoteImg {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .telSubpage__quote {
+    font-size: 1.2em;
+  }
+
+  .telSubpage__attribution {
+    font-size: .9em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+
+img.telSubpage__flippedImg {
+  width: 400px;
+}
