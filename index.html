@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- <link href="css/front.css" rel="stylesheet"> -->
   <link href="css/tel-template.css" rel="stylesheet">
-    
-  
+
+
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -108,13 +108,13 @@
               <li class="dropdown">
                 <a href="/about/" class="dropdown-toggle disabled" data-toggle="dropdown">About  <strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
-                  <li><a href="/about/">About the Center</a></li> 
+                  <li><a href="/about/">About the Center</a></li>
                   <li><a href="/about/connect/">Connect with CNDLS</a></li>
                   <li><a href="https://blogs.commons.georgetown.edu/cndls/"><em>The Prospect</em> Blog</a></li>
                   <li><a href="/people/staff/">Our Staff</a></li>
                   <!-- <li><a href="/people/senior_scholars">Senior Fellows</a></li> -->
                   <li><a href="/people/student_associates/">Student Associates</a></li>
-                  <li><a href="/about/advisory/">Faculty Advisory Board</a></li> 
+                  <li><a href="/about/advisory/">Faculty Advisory Board</a></li>
                   <li><a href="/about/jobs">Join the CNDLS Team</a></li>
                 </ul>
               </li>
@@ -127,12 +127,11 @@
 
   <div class="container">
     <ul class="breadcrumb" style="position: absolute; top: 78px; background: none; font-size: 0.78571428571429em;">
-    <!-- {% block breadcrumb %}{% endblock %} -->
     </ul>
   </div>
 
-<!-- {% block content %} 
-<!---------------------------------------- 
+
+<!----------------------------------------
 
   Sticky TEL Menu
 
@@ -140,7 +139,7 @@
 <!-- <button class="testButton">Clicky</button> -->
 <nav class="telMenu">
   <ul class="telMenu__list">
-    
+
     <li>
       <a href="/tel/">
         <div class="telMenu__item telMenu--home">
@@ -201,7 +200,7 @@
 
 
 
-<!---------------------------------------- 
+<!----------------------------------------
 
   BLUE TEL BANNER
 
@@ -215,24 +214,15 @@
 </div><!-- .bannerWrapper
 
 
-{% block postcontent %}
-<div class="mainContent">
-
   <!----------------------------------------
 
     CAROUSEL
 
   ---------------------------------------->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <!-- <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol> -->
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-        
+
       <div class="item active carousel__item">
         <div class="carousel__cap">
           <div class="container">
@@ -272,7 +262,7 @@
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">&lsaquo;</a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">&rsaquo;</a>
-  
+
   </div><!-- #myCarousel -->
 
   <!----------------------------------------
@@ -306,7 +296,7 @@
           <img class="telBlock__img" src="https://cndls.georgetown.edu/m/img/faculty_story_3.jpg" alt="TEL Opportunites image">
         </a>
       </div><!-- .telBlock -->
-      
+
       <div class="telBlock span6">
         <h2 class="telBlock__header">TEL Topics</h2>
         <p class="telBlock__description">Have a goal in mind and interest in finding out what technologies might work for you? Explore ways to use technology to increase student engagement, improve student writing, and more.<a href="/tel/topics"> See more TEL Topics</a></p>
@@ -403,49 +393,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/tel.js"></script>
-    <!-- <script>
-        var doit;
-        function resizedw(){
-            var width = $(window).width();
 
-            if( width <= 979 ) {
-                $('ul.nav li.dropdown a.dropdown-toggle').removeClass('disabled');
-            } else {
-                $('ul.nav li.dropdown a.dropdown-toggle').addClass('disabled');
-            }
-        }
-
-        $(document).ready(function() {
-            //resizedw() already here before badge stuff
-            resizedw();
-
-            var $window = $(window);
-            var mld_badge = $("#mld_badge");
-            function scrollHandler(event, err) {
-              console.log($window.scrollTop());
-              if ($window.scrollTop() > 150) {
-                mld_badge.addClass("smallerBadge");
-              }
-              else {
-                mld_badge.removeClass("smallerBadge");
-              }
-            }
-
-            $window.scroll(scrollHandler);
-
-        });
-
-        $(window).resize(function() {
-            clearTimeout(doit);
-            doit = setTimeout(function() {
-                resizedw();
-            }, 100);
-        });
-    </script> -->
-
-    <!-- {% block postscript %}
-    
-    {% endblock %} -->
 </body>
 
 </html>
