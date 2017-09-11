@@ -396,19 +396,53 @@ Vars
   top: 0;
 }
 
-/*
-This is where the main cndls nav goes hamburger
-*/
-@media screen and (max-width: 967px) {
+@media screen and (max-width: 725px) {
   .telMenu {
     top: 18vh;
+    width: 100px;
   }
 }
 
-
-
-@media screen and (max-width: 990px) {
+@media screen and (min-width: 300px) and (max-width: 790px) {
   .telMenu {
+    top: 18vh;
+  }
+  .telMenu--home,
+  .telMenu--home:hover,
+  .telMenu--tel_opportunities,
+  .telMenu--tel_opportunities:hover,
+  .telMenu--tel_topics,
+  .telMenu--tel_topics:hover,
+  .telMenu--faculty_stories,
+  .telMenu--faculty_stories:hover,
+  .telMenu--tools_services,
+  .telMenu--tools_services:hover,
+  .telMenu--related_projects,
+  .telMenu--related_projects:hover {
+    background-image: none;
+  }
+  .telMenu__item__name {
+    font-size: .8em;
+    top: 30%;
+    padding: 0 .3em;
+  }
+  .telMenu--home .telMenu__item__name,
+  .telMenu--tel_topics .telMenu__item__name {
+    top: 50%;
+  }
+  .scrollDown {
+    display: none;
+  }
+  .telMenu__item.scrollDownItem span {
+    top: 30%;
+  }
+}
+/*
+This is where the main cndls nav goes hamburger
+*/
+@media screen and (min-width: 791px) and (max-width: 980px) {
+  .telMenu {
+    top: 18vh;
     width: 13vw;
     /*height: 80vh;*/
   }
@@ -418,7 +452,7 @@ This is where the main cndls nav goes hamburger
   }
 
   .telMenu__item__name {
-    font-size: .7em;
+    font-size: .65em;
   }
 }
 
